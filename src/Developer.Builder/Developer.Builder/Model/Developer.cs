@@ -7,7 +7,7 @@ namespace Developers.Builder.Model
     public class Developer
     {
         private const int LifeTicks = int.MaxValue;
-        private const double LifeChances = LifeTicks - (LifeTicks * 0.75);
+        private const double LifeChances = LifeTicks * 0.998;
         private static readonly Random _lifeRandomicity = new Random();
 
         private Developer()
