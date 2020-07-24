@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using Developer.Builder.Builders;
+using Developers.Builder.Builders;
 
-namespace Developer.Builder.Model
+namespace Developers.Builder.Model
 {
     public class Developer
     {
+        private const int LifeTicks = int.MaxValue;
+        private const double LifeChances = LifeTicks - (LifeTicks * 0.75);
+        private static readonly Random _lifeRandomicity = new Random();
+
         private Developer()
         {
             ProgrammingLanguages = Array.Empty<ProgrammingLanguage>();
@@ -21,12 +25,14 @@ namespace Developer.Builder.Model
         public IReadOnlyCollection<ProgrammingLanguage> ProgrammingLanguages { get; private set; }
         public IReadOnlyCollection<Interest> Interests { get; set; }
         public IReadOnlyCollection<FoundAt> FoundAt { get; set; }
+        public bool HasLife { get; private set; }
 
         public static Developer Married()
         {
             return new Developer
             {
-                IsMarried = true
+                IsMarried = true,
+                HasLife = true
             };
         }
 
@@ -34,7 +40,8 @@ namespace Developer.Builder.Model
         {
             return new Developer
             {
-                IsMarried = false
+                IsMarried = false,
+                HasLife = true
             };
         }
 
@@ -80,8 +87,17 @@ namespace Developer.Builder.Model
             return this;
         }
 
-        public void Travel() { }
-        public void EnjoyLife() { }
-        public void Code() { }
+        public void Travel() { DetermineAlive(); }
+        public void EnjoyLife() { DetermineAlive(); }
+        public void Code() { DetermineAlive(); }
+
+        private void DetermineAlive()
+        {
+            int chance = _lifeRandomicity.Next(0, LifeTicks);
+            if (chance > LifeChances)
+            {
+                HasLife = false; // 👻
+            }
+        }
     }
 }
