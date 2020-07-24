@@ -42,3 +42,5 @@ If you want to read a bit about my ideas, I usually share them on [Medium](https
 - [Domain Events vs. Integration Events](https://medium.com/@arleypadua/domain-events-vs-integration-events-5eb29a34fdbc)
 
 If you want to get in touch, you will find me on [Twitter](https://twitter.com/_arleypadua) or [LinkedIn](https://www.linkedin.com/in/arleypadua/).
+
+_P.S.: I actually coded the model you've seen above, [check it out](https://github.com/arleypadua/arleypadua)._
