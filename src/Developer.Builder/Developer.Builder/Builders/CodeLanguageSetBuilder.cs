@@ -1,7 +1,7 @@
-﻿using Developer.Builder.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Developers.Builder.Model;
 
-namespace Developer.Builder.Builders
+namespace Developers.Builder.Builders
 {
     public class CodeLanguageSetBuilder
     {

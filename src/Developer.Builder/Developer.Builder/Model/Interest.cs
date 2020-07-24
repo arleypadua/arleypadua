@@ -1,4 +1,4 @@
-﻿namespace Developer.Builder.Model
+﻿namespace Developers.Builder.Model
 {
     public readonly struct Interest
     {

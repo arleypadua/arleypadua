@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Developer.Builder.Model
+namespace Developers.Builder.Model
 {
     public readonly struct Musician
     {
