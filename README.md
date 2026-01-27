@@ -26,8 +26,6 @@ while (arley.HasLife)
     arley.Code();
 }
 
-// todo: find out what is next 😅
-
 ```
 
 You've seen a summary about me above, but basically I'm a software developer passioned about software architecture and distributed systems.
